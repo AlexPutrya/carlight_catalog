@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('app');
 });
+
+Route::prefix('api_v1')->group(function() {
+    Route::get('catalog/', 'Api\ShowCatalog');
+});
