@@ -32151,6 +32151,13 @@ var Catalogue = function (_Component) {
         key: 'onChangeHandle',
         value: function onChangeHandle(inputValue) {
             this.setState({ catalog: inputValue });
+
+            __WEBPACK_IMPORTED_MODULE_2_axios___default.a.get('/api_v1/catalog/').then(function (response) {
+                // var new_arr = response.data.forEach(function(element, index, array) {
+                //     console.log(element); 
+                // });
+                console.log(response.data[0]);
+            });
         }
     }, {
         key: 'render',

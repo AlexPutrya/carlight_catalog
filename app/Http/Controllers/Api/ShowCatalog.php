@@ -25,11 +25,19 @@ class ShowCatalog extends Controller {
                         DB::raw("(SELECT type from bulb_types WHERE id = year_bulb.backup_light) as backup_light"),
                         DB::raw("(SELECT type from bulb_types WHERE id = year_bulb.license_plate_light) as license_plate_light")
                         )
-                    ->take(20)
+                    ->take(100)
                     ->get();
-
+        
+        $catalog = [];
+        
+        foreach($brands as $row) {
+            if(!isset($catalog[$row->name])) {
+                $catalog[$row->name] = [];
+            }
+            array_push($catalog[$row->name], $row);
+        }
        
-
-        return ['data' => $brands];
+        return $catalog;
+        // return ['data' => $brands];
     }
 }
