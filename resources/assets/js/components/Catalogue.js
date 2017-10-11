@@ -1,14 +1,26 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import axios from 'axios';
 
 import Search from './Search';
+import Table from './Table';
 
 class Catalogue extends Component {
+    constructor(props){
+        super(props);
+        this.state = {catalog : ''};
+        this.onChangeHandle = this.onChangeHandle.bind(this);
+    }
+    
+    onChangeHandle(inputValue) {
+        this.setState({catalog : inputValue});
+    }
+
     render() {
         return (
             <div>
-                <Search />
-                <h1>Hello Catalogue</h1>
+                <Search changeHandle = {this.onChangeHandle}/>
+                <Table catalog = {this.state.catalog}/>
             </div>
         );
     }

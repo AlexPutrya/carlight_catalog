@@ -7,6 +7,6 @@ class ShowCatalog extends Controller {
     
     public function __invoke() {
         // $data = [na]
-        return ['name'=>'hello'];
+        return ['data'=>'hello'];
     }
 }
