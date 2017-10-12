@@ -52531,7 +52531,7 @@ exports = module.exports = __webpack_require__(69)(undefined);
 
 
 // module
-exports.push([module.i, "body {\n    background-color: green;\n}\n\n.container {\n    width: 90%;\n    margin: 0 auto;\n}", ""]);
+exports.push([module.i, "body {\n    background-color: grey;\n}\n\n.container {\n    width: 90%;\n    margin: 0 auto;\n}\n\n.table {\n    display: table;\n}\n\n.cell {\n    display: inline-block;\n    margin: 2px 5px 2px 5px;\n    background-color: white;\n    width: 10%;\n}", ""]);
 
 // exports
 
