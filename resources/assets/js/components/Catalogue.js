@@ -13,21 +13,16 @@ class Catalogue extends Component {
     }
     
     onChangeHandle(inputValue) {
-        this.setState({catalog : inputValue});
 
-        axios.get('/api_v1/catalog/')
+        axios.get('/api_v1/catalog/'+inputValue)
         .then(function(response) {
-            // var new_arr = response.data.forEach(function(element, index, array) {
-            //     console.log(element); 
-            // });
-            console.log(response.data[0]);
-            
-        });
+            this.setState({catalog : response.data});
+        }.bind(this));
     }
 
     render() {
         return (
-            <div>
+            <div className="container">
                 <Search changeHandle = {this.onChangeHandle}/>
                 <Table catalog = {this.state.catalog}/>
             </div>

@@ -10,7 +10,6 @@
     <body>
         <div id="root">
         </div>
-        <h1>Hello world</h1>
         <script type="text/javascript" src="{{ mix('js/app.js') }}"></script>
     </body>
 </html>

@@ -16,5 +16,5 @@ Route::get('/', function () {
 });
 
 Route::prefix('api_v1')->group(function() {
-    Route::get('catalog/', 'Api\ShowCatalog');
+    Route::get('catalog/{model?}', 'Api\ShowCatalog');
 });
