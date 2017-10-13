@@ -11,10 +11,11 @@ class BrandBlock extends Component {
         });
 
         return (
-            <div className="brand-block">
-                <h1>{this.props.name}</h1>
+            <tbody>
+                <caption>{this.props.name}</caption>
+                {/* <h1>{this.props.name}</h1> */}
                 {models_year_rows}
-            </div>
+            </tbody>
 
         );
     }

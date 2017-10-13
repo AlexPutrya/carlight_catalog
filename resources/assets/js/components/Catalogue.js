@@ -22,8 +22,13 @@ class Catalogue extends Component {
 
     render() {
         return (
-            <div className="container">
-                <Search changeHandle = {this.onChangeHandle}/>
+            <div className="container-fluid">
+                <header>
+                    <div className="logo">
+                        <h1>Logo</h1>
+                    </div>
+                    <Search changeHandle = {this.onChangeHandle}/>
+                </header>
                 <Table catalog = {this.state.catalog}/>
             </div>
         );

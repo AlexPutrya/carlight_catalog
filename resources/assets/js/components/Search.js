@@ -8,7 +8,14 @@ class Search extends Component {
 
     render() {
         return (
-            <input type="text" placeholder="Марка, модель" onChange={this.findValue.bind(this)}/>
+            <div className="search">
+                <div className="input-group input-group-lg">
+                    <span className="input-group-addon" id="sizing-addon1">
+                        Search
+                    </span>
+                    <input className="form-control" type="text" placeholder="Марка, модель" onChange={this.findValue.bind(this)}/>
+                </div>
+            </div>
         );
     }
 }

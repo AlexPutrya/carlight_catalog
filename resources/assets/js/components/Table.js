@@ -10,9 +10,18 @@ class Table extends Component {
         });
 
         return (
-            <div className="table">
+            <table className="table table-hover table-sm table-responsive">
+                <thead>
+                    <tr>
+                        <th>Модель</th>
+                        <th>Год выпуска</th>
+                        <th>Ближний свет</th>
+                        <th>Дальний свет</th>
+                        <th>Противотуманные фары</th>
+                    </tr>
+                </thead>
                 {brand_blocks}
-            </div>
+            </table>
 
         );
     }

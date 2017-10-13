@@ -1,8 +1,28 @@
-body {
-    background-color: grey;
+body{
+    background: linear-gradient(45deg,rgba(0, 0, 0, 0) 48%,rgba(0, 0, 0, 0.2) 50%,rgba(0, 0, 0, 0) 52%),linear-gradient(-45deg,rgba(0, 0, 0, 0) 48%,rgba(0, 0, 0, 0.2) 50%,rgba(0, 0, 0, 0) 52%);
+    background-size: 1em 1em;
+    background-color: #fff;
 }
 
-.container {
-    width: 90%;
+.container-fluid {
+    width: 95%;
     margin: 0 auto;
+    margin-top: 20px;
+    background-color: #fff;
+    border-top: 5px solid #f2ac04;
+}
+
+.logo {
+    display: inline-block;
+    float: left;
+}
+
+.search {
+    width: 70%;
+    display: inline-block;
+    float: right;
+}
+
+th, td {
+    text-align: center;
 }

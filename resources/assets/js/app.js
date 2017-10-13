@@ -8,4 +8,5 @@
 require('./bootstrap');
 
 import Catalogue from './components/Catalogue';
+import 'bootstrap/dist/css/bootstrap.css';
 import '../css/style.css';

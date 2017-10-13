@@ -7,11 +7,13 @@ class ModelsYearRow extends Component {
         var info = this.props.info;
         
         return (
-            <div className="row">
-                <div className="cell">{info.model_name}</div>
-                <div className="cell">{info.year_range}</div>
-                <div className="cell">{info.low_beam}</div>
-            </div>
+            <tr>
+                <td>{info.model_name}</td>
+                <td>{info.year_range}</td>
+                <td>{info.low_beam}</td>
+                <td>{info.high_beam}</td>
+                <td>{info.fog_light}</td>
+            </tr>
        );
     }
 }
