@@ -5,24 +5,40 @@ body{
 }
 
 .container-fluid {
-    width: 95%;
+    width: 100%;
+    min-height: 90vh;
     margin: 0 auto;
-    margin-top: 20px;
     background-color: #fff;
-    border-top: 5px solid #f2ac04;
+    border-top: 5px solid #3366FF;
 }
 
 .logo {
     display: inline-block;
     float: left;
+    margin-top: 10px;
+    width: 30%;
 }
-
+.banner {
+    text-align: center;
+    color: #3366FF;
+    text-transform: uppercase;
+}
 .search {
-    width: 70%;
-    display: inline-block;
-    float: right;
+    margin-top: 10px;
 }
 
 th, td {
     text-align: center;
+}
+
+@media screen and (max-width: 1280px) {
+    .logo {
+        margin: 0 auto;
+        margin-top: 10px;
+        width: 80%;
+        float: none;
+    }
+    .logo-block {
+        text-align: center;
+    }
 }

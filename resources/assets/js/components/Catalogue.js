@@ -13,7 +13,6 @@ class Catalogue extends Component {
     }
     
     onChangeHandle(inputValue) {
-
         axios.get('/api_v1/catalog/'+inputValue)
         .then(function(response) {
             this.setState({catalog : response.data});
@@ -21,15 +20,26 @@ class Catalogue extends Component {
     }
 
     render() {
+
+        let main;
+        if(this.state.catalog && this.state.catalog != ''){
+            main = (<Table catalog = {this.state.catalog}/>);
+        } else {
+            main = (<img src="./img/car.svg"/>);
+        }
         return (
             <div className="container-fluid">
                 <header>
-                    <div className="logo">
-                        <h1>Logo</h1>
+                    <div className="logo-block">
+                        <img src="./img/logo.png" className="logo"/>
                     </div>
-                    <Search changeHandle = {this.onChangeHandle}/>
+                    <div className="banner">
+                        <img src="./img/bulbs.jpg"/>
+                        <h3>подбор автоламп по марке и моделе автомобиля</h3>  
+                    </div>
                 </header>
-                <Table catalog = {this.state.catalog}/>
+                <Search changeHandle = {this.onChangeHandle}/>
+                {main}
             </div>
         );
     }

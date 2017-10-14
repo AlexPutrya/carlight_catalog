@@ -32605,6 +32605,13 @@ var Catalogue = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
+
+            var main = void 0;
+            if (this.state.catalog && this.state.catalog != '') {
+                main = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__Table__["a" /* default */], { catalog: this.state.catalog });
+            } else {
+                main = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: './img/car.svg' });
+            }
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
                 { className: 'container-fluid' },
@@ -32613,16 +32620,22 @@ var Catalogue = function (_Component) {
                     null,
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
-                        { className: 'logo' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'h1',
-                            null,
-                            'Logo'
-                        )
+                        { className: 'logo-block' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: './img/logo.png', className: 'logo' })
                     ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Search__["a" /* default */], { changeHandle: this.onChangeHandle })
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'banner' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: './img/bulbs.jpg' }),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'h3',
+                            null,
+                            '\u043F\u043E\u0434\u0431\u043E\u0440 \u0430\u0432\u0442\u043E\u043B\u0430\u043C\u043F \u043F\u043E \u043C\u0430\u0440\u043A\u0435 \u0438 \u043C\u043E\u0434\u0435\u043B\u0435 \u0430\u0432\u0442\u043E\u043C\u043E\u0431\u0438\u043B\u044F'
+                        )
+                    )
                 ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__Table__["a" /* default */], { catalog: this.state.catalog })
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Search__["a" /* default */], { changeHandle: this.onChangeHandle }),
+                main
             );
         }
     }]);
@@ -53184,7 +53197,7 @@ exports = module.exports = __webpack_require__(17)(undefined);
 
 
 // module
-exports.push([module.i, "body{\n    background: linear-gradient(45deg,rgba(0, 0, 0, 0) 48%,rgba(0, 0, 0, 0.2) 50%,rgba(0, 0, 0, 0) 52%),linear-gradient(-45deg,rgba(0, 0, 0, 0) 48%,rgba(0, 0, 0, 0.2) 50%,rgba(0, 0, 0, 0) 52%);\n    background-size: 1em 1em;\n    background-color: #fff;\n}\n\n.container-fluid {\n    width: 95%;\n    margin: 0 auto;\n    margin-top: 20px;\n    background-color: #fff;\n    border-top: 5px solid #f2ac04;\n}\n\n.logo {\n    display: inline-block;\n    float: left;\n}\n\n.search {\n    width: 70%;\n    display: inline-block;\n    float: right;\n}\n\nth, td {\n    text-align: center;\n}", ""]);
+exports.push([module.i, "body{\n    background: linear-gradient(45deg,rgba(0, 0, 0, 0) 48%,rgba(0, 0, 0, 0.2) 50%,rgba(0, 0, 0, 0) 52%),linear-gradient(-45deg,rgba(0, 0, 0, 0) 48%,rgba(0, 0, 0, 0.2) 50%,rgba(0, 0, 0, 0) 52%);\n    background-size: 1em 1em;\n    background-color: #fff;\n}\n\n.container-fluid {\n    width: 100%;\n    min-height: 90vh;\n    margin: 0 auto;\n    background-color: #fff;\n    border-top: 5px solid #3366FF;\n}\n\n.logo {\n    display: inline-block;\n    float: left;\n    margin-top: 10px;\n    width: 30%;\n}\n.banner {\n    text-align: center;\n    color: #3366FF;\n    text-transform: uppercase;\n}\n.search {\n    margin-top: 10px;\n}\n\nth, td {\n    text-align: center;\n}\n\n@media screen and (max-width: 1280px) {\n    .logo {\n        margin: 0 auto;\n        margin-top: 10px;\n        width: 80%;\n        float: none;\n    }\n    .logo-block {\n        text-align: center;\n    }\n}", ""]);
 
 // exports
 
