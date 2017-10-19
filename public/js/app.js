@@ -32597,7 +32597,6 @@ var Catalogue = function (_Component) {
     _createClass(Catalogue, [{
         key: 'onChangeHandle',
         value: function onChangeHandle(inputValue) {
-
             __WEBPACK_IMPORTED_MODULE_2_axios___default.a.get('/api_v1/catalog/' + inputValue).then(function (response) {
                 this.setState({ catalog: response.data });
             }.bind(this));
@@ -32618,11 +32617,7 @@ var Catalogue = function (_Component) {
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'header',
                     null,
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'div',
-                        { className: 'logo-block' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: './img/logo.png', className: 'logo' })
-                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: './img/logo.png', className: 'logo' }),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
                         { className: 'banner' },
@@ -53197,7 +53192,7 @@ exports = module.exports = __webpack_require__(17)(undefined);
 
 
 // module
-exports.push([module.i, "body{\n    background: linear-gradient(45deg,rgba(0, 0, 0, 0) 48%,rgba(0, 0, 0, 0.2) 50%,rgba(0, 0, 0, 0) 52%),linear-gradient(-45deg,rgba(0, 0, 0, 0) 48%,rgba(0, 0, 0, 0.2) 50%,rgba(0, 0, 0, 0) 52%);\n    background-size: 1em 1em;\n    background-color: #fff;\n}\n\n.container-fluid {\n    width: 100%;\n    min-height: 90vh;\n    margin: 0 auto;\n    background-color: #fff;\n    border-top: 5px solid #3366FF;\n}\n\n.logo {\n    display: inline-block;\n    float: left;\n    margin-top: 10px;\n    width: 30%;\n}\n.banner {\n    text-align: center;\n    color: #3366FF;\n    text-transform: uppercase;\n}\n.search {\n    margin-top: 10px;\n}\n\nth, td {\n    text-align: center;\n}\n\n@media screen and (max-width: 1280px) {\n    .logo {\n        margin: 0 auto;\n        margin-top: 10px;\n        width: 80%;\n        float: none;\n    }\n    .logo-block {\n        text-align: center;\n    }\n}", ""]);
+exports.push([module.i, "body{\n    background: linear-gradient(45deg,rgba(0, 0, 0, 0) 48%,rgba(0, 0, 0, 0.2) 50%,rgba(0, 0, 0, 0) 52%),linear-gradient(-45deg,rgba(0, 0, 0, 0) 48%,rgba(0, 0, 0, 0.2) 50%,rgba(0, 0, 0, 0) 52%);\n    background-size: 1em 1em;\n    background-color: #fff;\n    font-family: sans-serif;\n}\n\n.container-fluid {\n    width: 100%;\n    min-height: 90vh;\n    margin: 0 auto;\n    background-color: #fff;\n    border-top: 5px solid #3366FF;\n}\n\n.logo {\n    display: inline-block;\n    float: left;\n    margin-top: 30px;\n    margin-right: 5%;\n    padding-right: 5%;\n    border-right: 1px solid grey; \n    width: 30%;\n}\n.banner {\n    width: 65%;\n    display: inline-block;\n    text-align: center;\n    color: #3366FF;\n    text-transform: uppercase;\n}\n.search {\n    margin-top: 10px;\n}\n\nth, td {\n    text-align: center;\n}\ncaption {\n    color: #3366FF;\n    text-transform: uppercase;\n    font-weight: bold;\n}\n\n@media screen and (max-width: 1280px) {\n    .logo {\n        margin: 0 auto;\n        padding: 0;\n        margin-top: 10px;\n        width: 90%;\n        float: none;\n        border-right: none;\n    }\n\n    .banner {\n        text-align: center;\n        width: 100%;\n    }\n}", ""]);
 
 // exports
 

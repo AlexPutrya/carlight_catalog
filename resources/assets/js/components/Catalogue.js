@@ -30,9 +30,7 @@ class Catalogue extends Component {
         return (
             <div className="container-fluid">
                 <header>
-                    <div className="logo-block">
-                        <img src="./img/logo.png" className="logo"/>
-                    </div>
+                    <img src="./img/logo.png" className="logo"/>
                     <div className="banner">
                         <img src="./img/bulbs.jpg"/>
                         <h3>подбор автоламп по марке и моделе автомобиля</h3>  
