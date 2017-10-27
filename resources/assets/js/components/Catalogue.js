@@ -4,6 +4,7 @@ import axios from 'axios';
 
 import Search from './Search';
 import Table from './Table';
+import Header from './Header';
 
 class Catalogue extends Component {
     constructor(props){
@@ -29,20 +30,11 @@ class Catalogue extends Component {
         }
         return (
             <div className="container-fluid">
-                <header>
-                    <img src="./img/logo.png" className="logo"/>
-                    <div className="banner">
-                        <img src="./img/bulbs.jpg"/>
-                        <h3>подбор автоламп по марке и моделе автомобиля</h3>  
-                    </div>
-                </header>
+                <Header/>
                 <Search changeHandle = {this.onChangeHandle}/>
                 {main}
             </div>
         );
     }
 }
-
-if(document.getElementById('root')) {
-    ReactDOM.render(<Catalogue />, document.getElementById('root'));
-}
+export default Catalogue;

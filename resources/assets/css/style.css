@@ -1,8 +1,13 @@
 body{
-    background: linear-gradient(45deg,rgba(0, 0, 0, 0) 48%,rgba(0, 0, 0, 0.2) 50%,rgba(0, 0, 0, 0) 52%),linear-gradient(-45deg,rgba(0, 0, 0, 0) 48%,rgba(0, 0, 0, 0.2) 50%,rgba(0, 0, 0, 0) 52%);
+    /*background: linear-gradient(45deg,rgba(0, 0, 0, 0) 48%,rgba(0, 0, 0, 0.2) 50%,rgba(0, 0, 0, 0) 52%),linear-gradient(-45deg,rgba(0, 0, 0, 0) 48%,rgba(0, 0, 0, 0.2) 50%,rgba(0, 0, 0, 0) 52%);
     background-size: 1em 1em;
     background-color: #fff;
+    */
     font-family: sans-serif;
+}
+#root {
+    width: 100%;
+    margin: 0 auto;
 }
 
 .container-fluid {
@@ -15,7 +20,6 @@ body{
 
 .logo {
     display: inline-block;
-    float: left;
     margin-top: 30px;
     margin-right: 5%;
     padding-right: 5%;
@@ -40,6 +44,41 @@ caption {
     color: #3366FF;
     text-transform: uppercase;
     font-weight: bold;
+}
+
+nav {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+
+ul {
+    float: left;
+    list-style: none;
+    padding: 10px;
+}
+nav li {
+    float: left;
+    margin: 0 5px 0 5px;
+}
+.input-warning {
+    border: 2px solid red;
+}
+
+.login {
+    width: 350px;
+    height: 250px;
+    text-align: left;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:-125px 0 0 -175px;
+    padding: 10px;
+    background-color: grey;
+}
+
+.login button {
+    float: right;
 }
 
 @media screen and (max-width: 1280px) {

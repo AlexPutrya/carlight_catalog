@@ -11,9 +11,14 @@
 |
 */
 
-Route::get('/', function () {
+//Route::get('/', function () {
+//    return view('app');
+//});
+
+Route::get('{slug}', function() {
     return view('app');
-});
+})
+->where('slug', '(?!api)([A-z\d-\/_.]+)?');
 
 Route::prefix('api_v1')->group(function() {
     Route::get('catalog/{model?}', 'Api\ShowCatalog');
