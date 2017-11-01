@@ -13,6 +13,7 @@ class ShowCatalog extends Controller {
                         ->join('models', 'brands.id', '=', 'models.brand_id')
                         ->join('year_bulb', 'models.id', '=', 'year_bulb.model_id')
                         ->select(
+                            'year_bulb.id as id',
                             'brands.name',
                             'models.name as model_name',
                             'year_bulb.year_range',

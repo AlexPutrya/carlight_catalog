@@ -7,8 +7,8 @@ class NavBar extends Component {
             <nav>
                 <ul>
                     <li><Link to="/"> Каталог</Link></li>
-                    <li><Link to="/test"> Типы ламп</Link></li>
-                    <li><Link to="/test2"> Производители</Link></li>
+                    <li><Link to="/bulbs"> Типы ламп</Link></li>
+                    <li><Link to="/brands"> Производители</Link></li>
                 </ul>
             </nav>
         );

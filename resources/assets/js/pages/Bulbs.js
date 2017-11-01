@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 
-import Header from './Header';
+import Header from '../components/Header';
+import axios from 'axios';
 
-class Test extends Component {
+class Bulbs extends Component {
     render() {
+
         return (
             <div className="container-fluid">
                 <Header/>
-                <h1> Hello </h1>
+                <h1> Типы ламп </h1>
             </div>
         );
+
     }
 }
 
-export default Test;
+export default Bulbs;

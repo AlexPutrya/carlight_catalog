@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import axios from 'axios';
+import DocumentTitle from 'react-document-title';
 
-import Search from './Search';
-import Table from './Table';
-import Header from './Header';
+import Search from '../components/Search';
+import Table from '../components/Table';
+import Header from '../components/Header';
 
 class Catalogue extends Component {
     constructor(props){
@@ -14,7 +14,7 @@ class Catalogue extends Component {
     }
     
     onChangeHandle(inputValue) {
-        axios.get('/api_v1/catalog/'+inputValue)
+        axios.get('/api/v1/catalog/'+inputValue)
         .then(function(response) {
             this.setState({catalog : response.data});
         }.bind(this));
@@ -29,11 +29,13 @@ class Catalogue extends Component {
             main = (<img src="./img/car.svg"/>);
         }
         return (
-            <div className="container-fluid">
-                <Header/>
-                <Search changeHandle = {this.onChangeHandle}/>
-                {main}
-            </div>
+            <DocumentTitle title="Каталог подбора автоламп по модели авто">
+                <div className="container-fluid">
+                    <Header/>
+                    <Search changeHandle = {this.onChangeHandle}/>
+                    {main}
+                </div>
+            </DocumentTitle>
         );
     }
 }

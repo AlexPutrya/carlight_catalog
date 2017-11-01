@@ -19,19 +19,19 @@ import {
     Switch
 } from 'react-router-dom';
 
-import Catalogue from './components/Catalogue';
-import Login from './components/Login';
-import NotF from './components/NotF';
-import Test from './components/Test';
+import Catalogue from './pages/Catalogue';
+import Login from './pages/Login';
+import NotFound from './pages/NotFound';
+import Bulbs from './pages/Bulbs';
 
 if(document.getElementById('root')) {
     ReactDOM.render(
     <Router>
         <Switch>
             <Route exact path="/" component={Catalogue}/>
-            <Route path="/test" component={Test}/>
+            <Route path="/bulbs" component={Bulbs}/>
             <Route path="/login" component={Login}/>
-            <Route component={NotF}/>
+            <Route component={NotFound}/>
         </Switch>
     </Router>
     , document.getElementById('root'));
