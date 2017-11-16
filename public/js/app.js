@@ -57388,6 +57388,7 @@ var Catalogue = function (_Component) {
         key: 'onChangeHandle',
         value: function onChangeHandle(inputValue) {
             __WEBPACK_IMPORTED_MODULE_1_axios___default.a.get('/api/v1/catalog/' + inputValue).then(function (response) {
+                console.log(response.data);
                 this.setState({ catalog: response.data });
             }.bind(this));
         }

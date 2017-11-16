@@ -16,6 +16,7 @@ class Catalogue extends Component {
     onChangeHandle(inputValue) {
         axios.get('/api/v1/catalog/'+inputValue)
         .then(function(response) {
+            console.log(response.data);
             this.setState({catalog : response.data});
         }.bind(this));
     }

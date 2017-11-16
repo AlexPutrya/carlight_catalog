@@ -9,13 +9,13 @@ class CatalogController extends Controller {
     public function __invoke($model = null) {
         if($model) {
 
-            $brands = DB::table('brands')
-                        ->join('models', 'brands.id', '=', 'models.brand_id')
-                        ->join('year_bulb', 'models.id', '=', 'year_bulb.model_id')
+            $brands = DB::table('car_brands')
+                        ->join('car_models', 'car_brands.id', '=', 'car_models.brand_id')
+                        ->join('year_bulb', 'car_models.id', '=', 'year_bulb.model_id')
                         ->select(
                             'year_bulb.id as id',
-                            'brands.name',
-                            'models.name as model_name',
+                            'car_brands.name',
+                            'car_models.name as model_name',
                             'year_bulb.year_range',
                             DB::raw("(SELECT type from bulb_types WHERE id = year_bulb.low_beam) as low_beam"),
                             DB::raw("(SELECT type from bulb_types WHERE id = year_bulb.high_beam) as high_beam"),
@@ -28,7 +28,7 @@ class CatalogController extends Controller {
                             DB::raw("(SELECT type from bulb_types WHERE id = year_bulb.backup_light) as backup_light"),
                             DB::raw("(SELECT type from bulb_types WHERE id = year_bulb.license_plate_light) as license_plate_light")
                             )
-                        ->where('models.name', 'like', '%'.$model.'%')
+                        ->where('car_models.name', 'like', '%'.$model.'%')
                         ->get();
             
             $catalog = [];
@@ -43,8 +43,6 @@ class CatalogController extends Controller {
             $catalog = [];
         }
        
-        return $catalog;
-        // return $brands;
-        // return ['data' => $brands];
+        return response()->json($catalog, 200);
     }
 }
