@@ -8,7 +8,7 @@ use JWTAuth;
 use App\User;
 use JWTAuthException;
 
-class ApiController extends Controller {
+class AuthController extends Controller {
     
     private $user;
 

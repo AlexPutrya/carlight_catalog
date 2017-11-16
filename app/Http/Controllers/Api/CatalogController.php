@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 
-class ShowCatalog extends Controller {
+class CatalogController extends Controller {
     
     public function __invoke($model = null) {
         if($model) {

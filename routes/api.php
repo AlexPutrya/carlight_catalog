@@ -13,15 +13,25 @@
 */
 
 Route::group(['middleware' => 'api', 'prefix' => 'v1'], function() {
-    Route::get('catalog/{model?}', 'Api\ShowCatalog');
-    Route::post('login', 'Api\ApiController@login');
-    Route::post('register', 'Api\ApiController@register');
+    Route::get('catalog/{model?}', 'Api\CatalogController');
 
-    Route::get('image', 'Api\ImageController@save');
+    Route::post('login', 'Api\AuthController@login');
+    Route::post('register', 'Api\AuthController@register');
 
     Route::group(['middleware' => 'jwt.auth'], function() {
-        Route::post('test', function(){
-            return response()->json(['message' => 'ok']);
-        });
+
+        Route::get('categories', 'Api\CategoryController@index');
+        Route::post('categories', 'Api\CategoryController@create');
+        Route::put('categories/{id}', 'Api\CategoryController@edit');
+        Route::delete('categories/{id}', 'Api\CategoryController@delete');
+
+        Route::get('posts', 'Api\PostController@index');
+        Route::post('posts', 'Api\PostController@create');
+        Route::put('posts/{id}', 'Api\PostController@edit');
+        Route::delete('posts/{id}', 'Api\PostController@delete');
+
+        Route::post('images', 'Api\ImageController@save');
+        Route::delete('images/{id}', 'Api\ImageController@delete');
+
     });
 });
