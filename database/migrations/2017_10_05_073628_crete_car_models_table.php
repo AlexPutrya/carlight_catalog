@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBrandsTable extends Migration
+class CreteCarModelsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,13 @@ class CreateBrandsTable extends Migration
      */
     public function up()
     {
-        if( !Schema::hasTable('brands')) {
-            Schema::create('brands', function (Blueprint $table) {
+        if( !Schema::hasTable('car_models')) {
+            Schema::create('car_models', function (Blueprint $table) {
                 $table->increments('id');
                 $table->string('name');
+                $table->integer('brand_id')->unsigned();
+
+                $table->foreign('brand_id')->references('id')->on('car_brands');
             });
         }
     }
@@ -28,6 +31,6 @@ class CreateBrandsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('brands');
+        Schema::dropIfExsists('car_models');
     }
 }

@@ -38,6 +38,7 @@ body{
 }
 
 th, td {
+    font-size: 10px;
     text-align: center;
 }
 caption {
@@ -64,21 +65,11 @@ nav li {
 .input-warning {
     border: 2px solid red;
 }
-
-.login {
-    width: 350px;
-    height: 250px;
-    text-align: left;
-    position:absolute;
-    left:50%;
-    top:50%;
-    margin:-125px 0 0 -175px;
-    padding: 10px;
-    background-color: grey;
-}
-
-.login button {
-    float: right;
+.main-car {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    opacity: 0.6;
 }
 
 @media screen and (max-width: 1280px) {

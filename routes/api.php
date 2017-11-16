@@ -17,6 +17,8 @@ Route::group(['middleware' => 'api', 'prefix' => 'v1'], function() {
     Route::post('login', 'Api\ApiController@login');
     Route::post('register', 'Api\ApiController@register');
 
+    Route::get('image', 'Api\ImageController@save');
+
     Route::group(['middleware' => 'jwt.auth'], function() {
         Route::post('test', function(){
             return response()->json(['message' => 'ok']);

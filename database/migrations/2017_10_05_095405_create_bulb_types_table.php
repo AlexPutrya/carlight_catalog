@@ -17,7 +17,6 @@ class CreateBulbTypesTable extends Migration
             Schema::create('bulb_types', function (Blueprint $table) {
                 $table->increments('id');
                 $table->string('type');
-                $table->text('info')->nullable();
             });
         }
     }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLightTypesTable extends Migration
+class CreateCarBrandsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateLightTypesTable extends Migration
      */
     public function up()
     {
-        if( !Schema::hasTable('light_types')) {
-            Schema::create('light_types', function (Blueprint $table) {
+        if( !Schema::hasTable('car_brands')) {
+            Schema::create('car_brands', function (Blueprint $table) {
                 $table->increments('id');
-                $table->string('type');
+                $table->string('name');
             });
         }
     }
@@ -28,6 +28,6 @@ class CreateLightTypesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('light_types');
+        Schema::dropIfExists('car_brands');
     }
 }

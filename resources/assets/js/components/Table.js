@@ -6,7 +6,7 @@ class Table extends Component {
 
     render() {
         var brand_blocks = Object.entries(this.props.catalog).map(([brand_name, year_list]) => {
-            return <BrandBlock name={brand_name}  models_years={year_list}/>
+            return <BrandBlock key={brand_name} name={brand_name}  models_years={year_list}/>
         });
         
         return (
@@ -27,7 +27,7 @@ class Table extends Component {
                             <th>Подсветка номера</th>
                         </tr>
                     </thead>
-                {brand_blocks}
+                    {brand_blocks}
             </table>
         );
     }

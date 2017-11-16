@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreteModelsTable extends Migration
+class CreateCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreteModelsTable extends Migration
      */
     public function up()
     {
-        if( !Schema::hasTable('models')) {
-            Schema::create('models', function (Blueprint $table) {
+        if(!Schema::hasTable('categories')){
+            Schema::create('categories', function (Blueprint $table) {
                 $table->increments('id');
-                $table->string('name');
-                $table->integer('brand_id')->unsigned();
-
-                $table->foreign('brand_id')->references('id')->on('brands');
+                $table->text('name');
             });
         }
     }
@@ -31,6 +28,6 @@ class CreteModelsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExsists('models');
+        Schema::dropIfExists('categories');
     }
 }

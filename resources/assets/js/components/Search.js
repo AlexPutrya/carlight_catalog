@@ -11,9 +11,9 @@ class Search extends Component {
             <div className="search">
                 <div className="input-group input-group-lg">
                     <span className="input-group-addon" id="sizing-addon1">
-                        Search
+                        Поиск
                     </span>
-                    <input className="form-control" type="text" placeholder="Марка, модель" onChange={this.findValue.bind(this)}/>
+                    <input className="form-control" type="text" placeholder="Начните вводить модель автомобиля" onChange={this.findValue.bind(this)}/>
                 </div>
             </div>
         );

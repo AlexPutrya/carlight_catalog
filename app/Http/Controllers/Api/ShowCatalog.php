@@ -28,7 +28,6 @@ class ShowCatalog extends Controller {
                             DB::raw("(SELECT type from bulb_types WHERE id = year_bulb.backup_light) as backup_light"),
                             DB::raw("(SELECT type from bulb_types WHERE id = year_bulb.license_plate_light) as license_plate_light")
                             )
-                        // ->take(100)
                         ->where('models.name', 'like', '%'.$model.'%')
                         ->get();
             

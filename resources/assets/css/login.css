@@ -1,0 +1,15 @@
+.login {
+    width: 350px;
+    height: 250px;
+    text-align: left;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:-125px 0 0 -175px;
+    padding: 10px;
+    background-color: grey;
+}
+
+.login button {
+    float: right;
+}

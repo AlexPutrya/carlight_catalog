@@ -7,7 +7,7 @@ class BrandBlock extends Component {
     render() {
 
         var models_year_rows = this.props.models_years.map((row) => {
-            return <ModelsYearRow info={row}/>
+            return <ModelsYearRow key={row.id} info={row}/>
         });
 
         return (

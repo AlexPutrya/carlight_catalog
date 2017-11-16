@@ -26,10 +26,10 @@ class Catalogue extends Component {
         if(this.state.catalog && this.state.catalog != ''){
             main = (<Table catalog = {this.state.catalog}/>);
         } else {
-            main = (<img src="./img/car.svg"/>);
+            main = (<img className="main-car" src="./img/cactus.png"/>);
         }
         return (
-            <DocumentTitle title="Каталог подбора автоламп по модели авто">
+            <DocumentTitle title="Быстрый подбор лампы по модели автомобиля">
                 <div className="container-fluid">
                     <Header/>
                     <Search changeHandle = {this.onChangeHandle}/>

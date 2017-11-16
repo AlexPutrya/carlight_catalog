@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateYaerBulbTable extends Migration
+class CreateYearBulbTable extends Migration
 {
     /**
      * Run the migrations.
@@ -29,7 +29,7 @@ class CreateYaerBulbTable extends Migration
                 $table->integer('backup_light')->nullable();
                 $table->integer('license_plate_light')->nullable();
 
-                $table->foreign('model_id')->references('id')->on('models');
+                $table->foreign('model_id')->references('id')->on('car_models');
             });
         }
     }
