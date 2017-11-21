@@ -29,7 +29,9 @@ class PostController extends Controller
                 'data' => $e->getMessage()],
                 501);
         }
-        return response()->json(['message' => 'Post created', 'post_id' => $post->id], 200);
+        return response()->json([
+            'message' => 'Post created',
+            'post_id' => $post->id], 200);
     }
 
     public function edit(Request $request, $id){
@@ -47,14 +49,13 @@ class PostController extends Controller
                 501);
         }
         return response()->json(['message' => 'Post is updating succes'], 200);
-
     }
 
-    public function delete($id) {
+    public function delete($id){
         try {
             $post = Post::find($id);
             $post->delete();
-        } catch(\Exception $e){
+        } catch (\Exception $e) {
             return response()->json([
                 'message' => 'Databse deleted error, post can\'t be deleted',
                 'data' => $e->getMessage()],
