@@ -30,7 +30,7 @@ Route::group(['middleware' => 'api', 'prefix' => 'v1'], function() {
         Route::put('posts/{id}', 'Api\PostController@edit');
         Route::delete('posts/{id}', 'Api\PostController@delete');
 
-        Route::post('images', 'Api\ImageController@save');
+        Route::post('images/{id}', 'Api\ImageController@save');
         Route::delete('images/{id}', 'Api\ImageController@delete');
 
     });
