@@ -22,7 +22,7 @@ class AuthController extends Controller {
 
         try {
             if(!$token = JWTAuth::attempt($credentials)){
-                return response()->json(['invalid email or password'], 422);
+                return response()->json(['message' => 'invalid email or password'], 422);
             }
         } catch(JWTAuthException $e) {
             return response()->json(['failde to create token', 500]);

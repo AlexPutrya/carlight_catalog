@@ -22,6 +22,7 @@ import Catalogue from './pages/Catalogue';
 import Login from './pages/Login';
 import NotFound from './pages/NotFound';
 import Bulbs from './pages/Bulbs';
+import Admin from './pages/Admin';
 
 if(document.getElementById('root')) {
     ReactDOM.render(
@@ -30,6 +31,7 @@ if(document.getElementById('root')) {
             <Route exact path="/" component={Catalogue}/>
             <Route path="/bulbs" component={Bulbs}/>
             <Route path="/login" component={Login}/>
+            <Route path="/admin" component={Admin}/>
             <Route component={NotFound}/>
         </Switch>
     </Router>
